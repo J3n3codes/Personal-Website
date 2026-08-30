@@ -18,16 +18,18 @@ nav a {
     margin: 0 15px;
 }
 
-.welcome-image {
+.welcome-container {
     width: 100%;
-    max-width: 1200px;
-    max-height: 500px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
+    height: 400px;
+    overflow: hidden;
 }
 
+.welcome-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
 nav a:hover {
     text-decoration: underline;
 }
