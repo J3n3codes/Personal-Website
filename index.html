@@ -13,35 +13,52 @@
 
 <body>
 
-    <!-- Language Selection -->
-    <!-- Language Selection -->
-<section class="language-selection">
 
-    <div class="language-instructions">
-        <span>Please select your language</span>
-        <span>Por favor, seleccione su idioma</span>
-        <span>Veuillez sélectionner votre langue</span>
+    <!-- =========================
+         LANGUAGE BANNER
+         ========================= -->
+
+    <section class="language-banner">
+
+        <!-- Rotating language instruction -->
+        <div id="language-message" class="language-message">
+            Please select your language
+        </div>
+
+
+        <!-- Language buttons -->
+        <div class="language-options">
+
+            <button type="button" onclick="selectLanguage('en')">
+                English
+            </button>
+
+            <button type="button" onclick="selectLanguage('es')">
+                Español
+            </button>
+
+            <button type="button" onclick="selectLanguage('fr')">
+                Français
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LANGUAGE NOTICE
+         ========================= -->
+
+    <div id="learning-notice" class="learning-notice">
+
     </div>
 
-    <div class="language-options">
 
-        <button type="button" onclick="selectLanguage('en')">
-            English
-        </button>
+    <!-- =========================
+         NAVIGATION
+         ========================= -->
 
-        <button type="button" onclick="selectLanguage('es')">
-            Español
-        </button>
-
-        <button type="button" onclick="selectLanguage('fr')">
-            Français
-        </button>
-
-    </div>
-
-</section>
-
-    <!-- Navigation -->
     <header class="site-header">
 
         <nav class="navbar">
@@ -57,10 +74,14 @@
     </header>
 
 
-    <!-- Main Content -->
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+
     <main>
 
-        <!-- Home / Image Section -->
+
+        <!-- Home -->
         <section id="home" class="hero">
 
             <div class="hero-image-container">
@@ -72,6 +93,7 @@
                 >
 
             </div>
+
 
             <div class="hero-text">
 
@@ -86,7 +108,7 @@
         </section>
 
 
-        <!-- About Section -->
+        <!-- About -->
         <section id="about" class="content-section">
 
             <h2>About</h2>
@@ -98,7 +120,7 @@
         </section>
 
 
-        <!-- Contact Section -->
+        <!-- Contact -->
         <section id="contact" class="content-section">
 
             <h2>Contact</h2>
@@ -112,7 +134,10 @@
     </main>
 
 
-    <!-- Footer -->
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
     <footer class="footer">
 
         <p>&copy; 2026 My Website</p>
@@ -120,6 +145,7 @@
     </footer>
 
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
