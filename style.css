@@ -271,3 +271,12 @@ body {
 
     color: white;
 }
+
+.language-instructions {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
