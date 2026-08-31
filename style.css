@@ -1,14 +1,16 @@
-/* =========================
+/* ==================================================
    GENERAL SETTINGS
-   ========================= */
+   ================================================== */
 
 * {
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
     margin: 0;
@@ -25,51 +27,77 @@ body {
 }
 
 
-/* =========================
-   LANGUAGE BANNER
-   ========================= */
 
-.language-banner {
+/* ==================================================
+   LANGUAGE SELECTION SCREEN
+   ================================================== */
+
+.language-screen {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
 
     width: 100%;
+    height: 100vh;
+
+    background-color: #222;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+}
+
+
+.language-box {
+
+    width: 90%;
+
+    max-width: 700px;
+
+    padding: 60px 40px;
 
     background-color: white;
 
+    border-radius: 15px;
+
     text-align: center;
 
-    padding: 25px 20px 30px;
-
-    border-bottom: 1px solid #ddd;
-
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 
-/* The rotating sentence */
+.language-box h1 {
 
-.language-message {
+    margin: 0 0 10px;
 
-    min-height: 40px;
+    font-size: 42px;
 
-    font-size: 26px;
-
-    font-weight: 600;
-
-    margin-bottom: 20px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
+    line-height: 1.2;
 }
 
 
-/* =========================
+.language-box p {
+
+    margin: 0 0 35px;
+
+    font-size: 20px;
+
+    color: #555;
+}
+
+
+
+/* ==================================================
    LANGUAGE BUTTONS
-   ========================= */
+   ================================================== */
 
-.language-options {
+.language-buttons {
 
     display: flex;
 
@@ -77,20 +105,15 @@ body {
 
     align-items: center;
 
-    gap: 25px;
-
+    gap: 20px;
 }
 
 
-.language-options button {
+.language-buttons button {
 
-    min-width: 130px;
+    min-width: 140px;
 
-    padding: 12px 25px;
-
-    font-size: 18px;
-
-    font-weight: 600;
+    padding: 15px 25px;
 
     background-color: white;
 
@@ -98,27 +121,49 @@ body {
 
     border: 2px solid #333;
 
-    border-radius: 6px;
+    border-radius: 7px;
+
+    font-size: 18px;
+
+    font-weight: 600;
 
     cursor: pointer;
 
     transition: all 0.2s ease;
-
 }
 
 
-.language-options button:hover {
+.language-buttons button:hover {
 
     background-color: #333;
 
     color: white;
 
+    transform: translateY(-2px);
 }
 
 
-/* =========================
+
+/* ==================================================
+   WEBSITE
+   ================================================== */
+
+/*
+   The website starts hidden.
+   JavaScript will make it visible
+   after the visitor chooses a language.
+*/
+
+.website {
+
+    display: none;
+}
+
+
+
+/* ==================================================
    LANGUAGE LEARNING NOTICE
-   ========================= */
+   ================================================== */
 
 .learning-notice {
 
@@ -126,24 +171,24 @@ body {
 
     width: 100%;
 
+    padding: 10px 20px;
+
     background-color: #eeeeee;
 
     color: #333;
 
     text-align: center;
 
-    padding: 10px 20px;
-
     font-size: 15px;
 
     line-height: 1.4;
-
 }
 
 
-/* =========================
+
+/* ==================================================
    NAVIGATION
-   ========================= */
+   ================================================== */
 
 .site-header {
 
@@ -156,7 +201,6 @@ body {
     top: 0;
 
     z-index: 1000;
-
 }
 
 
@@ -171,7 +215,6 @@ body {
     align-items: center;
 
     gap: 50px;
-
 }
 
 
@@ -188,7 +231,6 @@ body {
     padding: 15px 10px;
 
     transition: 0.2s;
-
 }
 
 
@@ -197,13 +239,13 @@ body {
     color: #cccccc;
 
     text-decoration: underline;
-
 }
 
 
-/* =========================
-   HERO
-   ========================= */
+
+/* ==================================================
+   HOME / HERO
+   ================================================== */
 
 .hero {
 
@@ -220,7 +262,6 @@ body {
     overflow: hidden;
 
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-
 }
 
 
@@ -239,7 +280,6 @@ body {
     overflow: hidden;
 
     background-color: #eeeeee;
-
 }
 
 
@@ -252,14 +292,12 @@ body {
     object-fit: contain;
 
     display: block;
-
 }
 
 
 .hero-text {
 
     padding: 30px 45px;
-
 }
 
 
@@ -270,7 +308,6 @@ body {
     font-size: 36px;
 
     line-height: 1.2;
-
 }
 
 
@@ -279,13 +316,13 @@ body {
     margin: 0;
 
     font-size: 20px;
-
 }
 
 
-/* =========================
-   ABOUT & CONTACT
-   ========================= */
+
+/* ==================================================
+   ABOUT / CONTACT
+   ================================================== */
 
 .content-section {
 
@@ -302,7 +339,6 @@ body {
     border-radius: 12px;
 
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-
 }
 
 
@@ -313,20 +349,19 @@ body {
     margin-bottom: 15px;
 
     font-size: 32px;
-
 }
 
 
 .content-section p {
 
     font-size: 19px;
-
 }
 
 
-/* =========================
+
+/* ==================================================
    FOOTER
-   ========================= */
+   ================================================== */
 
 .footer {
 
@@ -339,7 +374,6 @@ body {
     background-color: #222;
 
     color: white;
-
 }
 
 
@@ -348,45 +382,54 @@ body {
     margin: 0;
 
     font-size: 16px;
-
 }
 
 
-/* =========================
+
+/* ==================================================
    MOBILE
-   ========================= */
+   ================================================== */
 
 @media (max-width: 700px) {
 
-    .language-message {
 
-        font-size: 21px;
+    .language-box {
 
+        padding: 45px 20px;
     }
 
 
-    .language-options {
+    .language-box h1 {
+
+        font-size: 32px;
+    }
+
+
+    .language-box p {
+
+        font-size: 18px;
+    }
+
+
+    .language-buttons {
 
         gap: 10px;
-
     }
 
 
-    .language-options button {
+    .language-buttons button {
 
         min-width: 0;
 
-        padding: 10px 15px;
+        padding: 12px 14px;
 
         font-size: 15px;
-
     }
 
 
     .navbar {
 
         gap: 20px;
-
     }
 
 
@@ -394,27 +437,25 @@ body {
 
         font-size: 17px;
 
+        padding: 12px 5px;
     }
 
 
     .hero-image-container {
 
         height: 300px;
-
     }
 
 
     .hero-text {
 
         padding: 25px;
-
     }
 
 
     .hero-text h1 {
 
         font-size: 28px;
-
     }
 
 
@@ -423,7 +464,18 @@ body {
         margin: 20px 10px;
 
         padding: 30px 25px;
+    }
 
+
+    .content-section h2 {
+
+        font-size: 27px;
+    }
+
+
+    .content-section p {
+
+        font-size: 17px;
     }
 
 }
