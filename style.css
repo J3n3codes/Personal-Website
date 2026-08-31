@@ -289,7 +289,7 @@ body {
 
     height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
 
     display: block;
 }
