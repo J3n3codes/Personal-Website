@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,144 +10,196 @@
     <title>My Website</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
 
-    <!-- =========================
-         LANGUAGE BANNER
-         ========================= -->
+    <!-- ==================================================
+         LANGUAGE SELECTION SCREEN
+         ================================================== -->
 
-    <section class="language-banner">
+    <div id="language-screen" class="language-screen">
 
-        <!-- Rotating language instruction -->
-        <div id="language-message" class="language-message">
-            Please select your language
+        <div class="language-box">
+
+            <h1>Pick a Language</h1>
+
+            <p>Choose your preferred language</p>
+
+
+            <div class="language-buttons">
+
+                <button
+                    type="button"
+                    onclick="selectLanguage('en')">
+                    English
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="selectLanguage('es')">
+                    Español
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="selectLanguage('fr')">
+                    Français
+                </button>
+
+            </div>
+
         </div>
-
-
-        <!-- Language buttons -->
-        <div class="language-options">
-
-            <button type="button" onclick="selectLanguage('en')">
-                English
-            </button>
-
-            <button type="button" onclick="selectLanguage('es')">
-                Español
-            </button>
-
-            <button type="button" onclick="selectLanguage('fr')">
-                Français
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         LANGUAGE NOTICE
-         ========================= -->
-
-    <div id="learning-notice" class="learning-notice">
 
     </div>
 
 
-    <!-- =========================
-         NAVIGATION
-         ========================= -->
 
-    <header class="site-header">
+    <!-- ==================================================
+         ACTUAL WEBSITE
+         Initially hidden
+         ================================================== -->
 
-        <nav class="navbar">
-
-            <a href="#home">Home</a>
-
-            <a href="#about">About</a>
-
-            <a href="#contact">Contact</a>
-
-        </nav>
-
-    </header>
+    <div id="website" class="website">
 
 
-    <!-- =========================
-         MAIN CONTENT
-         ========================= -->
+        <!-- =========================
+             LANGUAGE NOTICE
+             ========================= -->
 
-    <main>
-
-
-        <!-- Home -->
-        <section id="home" class="hero">
-
-            <div class="hero-image-container">
-
-                <img
-                    src="tranquility.jpg"
-                    alt="Welcome to My Website"
-                    class="hero-image"
-                >
-
-            </div>
+        <div
+            id="learning-notice"
+            class="learning-notice">
+        </div>
 
 
-            <div class="hero-text">
 
-                <h1>Welcome to My Website</h1>
+        <!-- =========================
+             NAVIGATION
+             ========================= -->
 
-                <p>
-                    Welcome to my website.
+        <header class="site-header">
+
+            <nav class="navbar">
+
+                <a href="#home" id="nav-home">
+                    Home
+                </a>
+
+                <a href="#about" id="nav-about">
+                    About
+                </a>
+
+                <a href="#contact" id="nav-contact">
+                    Contact
+                </a>
+
+            </nav>
+
+        </header>
+
+
+
+        <!-- =========================
+             MAIN CONTENT
+             ========================= -->
+
+        <main>
+
+
+            <!-- HOME -->
+            <section id="home" class="hero">
+
+
+                <div class="hero-image-container">
+
+                    <img
+                        src="image.jpg"
+                        alt="Welcome to My Website"
+                        class="hero-image">
+
+                </div>
+
+
+                <div class="hero-text">
+
+                    <h1 id="home-title">
+                        Welcome to My Website
+                    </h1>
+
+                    <p id="home-text">
+                        Welcome to my website.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ABOUT -->
+            <section
+                id="about"
+                class="content-section">
+
+                <h2 id="about-title">
+                    About
+                </h2>
+
+                <p id="about-text">
+                    About me, my work and my hobbies.
                 </p>
 
-            </div>
-
-        </section>
+            </section>
 
 
-        <!-- About -->
-        <section id="about" class="content-section">
 
-            <h2>About</h2>
+            <!-- CONTACT -->
+            <section
+                id="contact"
+                class="content-section">
+
+                <h2 id="contact-title">
+                    Contact
+                </h2>
+
+                <p id="contact-text">
+                    Contact me through.
+                </p>
+
+            </section>
+
+
+        </main>
+
+
+
+        <!-- =========================
+             FOOTER
+             ========================= -->
+
+        <footer class="footer">
 
             <p>
-                About me, my work and my hobbies
+                &copy; 2026 My Website
             </p>
 
-        </section>
+        </footer>
 
 
-        <!-- Contact -->
-        <section id="contact" class="content-section">
+    </div>
 
-            <h2>Contact</h2>
-
-            <p>
-                Contact me through
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-         ========================= -->
-
-    <footer class="footer">
-
-        <p>&copy; 2026 My Website</p>
-
-    </footer>
 
 
     <!-- JavaScript -->
+
     <script src="script.js"></script>
+
 
 </body>
 
