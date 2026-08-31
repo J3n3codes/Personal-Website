@@ -227,3 +227,47 @@ body {
     }
 
 }
+
+.language-selection {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: white;
+}
+
+.language-selection h2 {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+}
+
+.language-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.language-options button {
+    padding: 12px 28px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    background-color: white;
+
+    color: #333;
+
+    border: 2px solid #333;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.language-options button:hover {
+    background-color: #333;
+
+    color: white;
+}
