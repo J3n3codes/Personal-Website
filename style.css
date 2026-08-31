@@ -1,4 +1,8 @@
-{
+/* =========================
+   GENERAL SETTINGS
+   ========================= */
+
+* {
     box-sizing: border-box;
 }
 
@@ -19,69 +23,38 @@ body {
 
     line-height: 1.6;
 }
-.site-header {
+
+
+/* =========================
+   LANGUAGE BANNER
+   ========================= */
+
+.language-banner {
+
     width: 100%;
 
-    background-color: #222;
+    background-color: white;
 
-    position: sticky;
+    text-align: center;
 
-    top: 0;
+    padding: 25px 20px 30px;
 
-    z-index: 1000;
-}
-.navbar {
-    min-height: 65px;
+    border-bottom: 1px solid #ddd;
 
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 50px;
 }
 
-.navbar a {
-    color: white;
 
-    text-decoration: none;
+/* The rotating sentence */
 
-    font-size: 20px;
+.language-message {
+
+    min-height: 40px;
+
+    font-size: 26px;
 
     font-weight: 600;
 
-    padding: 15px 10px;
-    
-    transition: 0.2s;
-}
-
-.navbar a:hover {
-    color: #cccccc;
-
-    text-decoration: underline;
-}
-
-.hero {
-    width: 100%;
-
-    max-width: 1400px;
-
-    margin: 35px auto 0;
-
-    background-color: white;
-
-    border-radius: 12px;
-
-    overflow: hidden;
-
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-}
-
-.hero-image-container {
-    width: 100%;
-
-    height: 420px;
+    margin-bottom: 20px;
 
     display: flex;
 
@@ -89,165 +62,31 @@ body {
 
     align-items: center;
 
-    overflow: hidden;
-
-    background-color: #eeeeee;
 }
 
-.hero-image {
-    width: 100%;
 
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-}
-.hero-text {
-    padding: 30px 45px;
-}
-
-.hero-text h1 {
-    margin: 0 0 10px;
-
-    font-size: 36px;
-
-    line-height: 1.2;
-}
-
-.hero-text p {
-    margin: 0;
-
-    font-size: 20px;
-}
-
-.content-section {
-    width: 100%;
-
-    max-width: 1400px;
-
-    margin: 30px auto;
-
-    padding: 45px;
-
-    background-color: white;
-
-    border-radius: 12px;
-
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-}
-
-.content-section h2 {
-    margin-top: 0;
-
-    margin-bottom: 15px;
-
-    font-size: 32px;
-
-    line-height: 1.2;
-}
-
-.content-section p {
-    font-size: 19px;
-
-    margin-bottom: 0;
-}
-
-.footer {
-    margin-top: 50px;
-
-    padding: 30px;
-
-    text-align: center;
-
-    background-color: #222;
-
-    color: white;
-}
-
-.footer p {
-    margin: 0;
-
-    font-size: 16px;
-}
-
-@media (max-width: 700px) {
-
-    .navbar {
-        min-height: 60px;
-
-        gap: 20px;
-    }
-
-    .navbar a {
-        font-size: 17px;
-
-        padding: 12px 5px;
-    }
-
-
-    .hero {
-        margin-top: 20px;
-
-        border-radius: 0;
-    }
-
- .hero-image-container {
-        height: 300px;
-    }
-
-
-    .hero-text {
-        padding: 25px;
-    }
-
-    .hero-text h1 {
-        font-size: 28px;
-    }
-
-    .hero-text p {
-        font-size: 18px;
-    }
-
-
-    .content-section {
-        margin: 20px 10px;
-
-        padding: 30px 25px;
-
-        border-radius: 10px;
-    }
-
-.content-section h2 {
-        font-size: 27px;
-    }
-
-    .content-section p {
-        font-size: 17px;
-    }
-
-}
-
-.language-selection {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: white;
-}
-
-.language-selection h2 {
-    margin: 0 0 20px 0;
-    font-size: 24px;
-}
+/* =========================
+   LANGUAGE BUTTONS
+   ========================= */
 
 .language-options {
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
-    gap: 20px;
+
+    gap: 25px;
+
 }
 
+
 .language-options button {
-    padding: 12px 28px;
+
+    min-width: 130px;
+
+    padding: 12px 25px;
 
     font-size: 18px;
 
@@ -263,20 +102,328 @@ body {
 
     cursor: pointer;
 
-    transition: 0.2s;
+    transition: all 0.2s ease;
+
 }
 
+
 .language-options button:hover {
+
     background-color: #333;
 
     color: white;
+
 }
 
-.language-instructions {
+
+/* =========================
+   LANGUAGE LEARNING NOTICE
+   ========================= */
+
+.learning-notice {
+
+    display: none;
+
+    width: 100%;
+
+    background-color: #eeeeee;
+
+    color: #333;
+
+    text-align: center;
+
+    padding: 10px 20px;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.site-header {
+
+    width: 100%;
+
+    background-color: #222;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+.navbar {
+
+    min-height: 65px;
+
     display: flex;
+
     justify-content: center;
-    gap: 30px;
-    margin-bottom: 20px;
-    font-size: 22px;
+
+    align-items: center;
+
+    gap: 50px;
+
+}
+
+
+.navbar a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
     font-weight: 600;
+
+    padding: 15px 10px;
+
+    transition: 0.2s;
+
+}
+
+
+.navbar a:hover {
+
+    color: #cccccc;
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 35px auto 0;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.hero-image-container {
+
+    width: 100%;
+
+    height: 420px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background-color: #eeeeee;
+
+}
+
+
+.hero-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+
+.hero-text {
+
+    padding: 30px 45px;
+
+}
+
+
+.hero-text h1 {
+
+    margin: 0 0 10px;
+
+    font-size: 36px;
+
+    line-height: 1.2;
+
+}
+
+
+.hero-text p {
+
+    margin: 0;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================
+   ABOUT & CONTACT
+   ========================= */
+
+.content-section {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 30px auto;
+
+    padding: 45px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.content-section h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 15px;
+
+    font-size: 32px;
+
+}
+
+
+.content-section p {
+
+    font-size: 19px;
+
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+
+    margin-top: 50px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #222;
+
+    color: white;
+
+}
+
+
+.footer p {
+
+    margin: 0;
+
+    font-size: 16px;
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .language-message {
+
+        font-size: 21px;
+
+    }
+
+
+    .language-options {
+
+        gap: 10px;
+
+    }
+
+
+    .language-options button {
+
+        min-width: 0;
+
+        padding: 10px 15px;
+
+        font-size: 15px;
+
+    }
+
+
+    .navbar {
+
+        gap: 20px;
+
+    }
+
+
+    .navbar a {
+
+        font-size: 17px;
+
+    }
+
+
+    .hero-image-container {
+
+        height: 300px;
+
+    }
+
+
+    .hero-text {
+
+        padding: 25px;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .content-section {
+
+        margin: 20px 10px;
+
+        padding: 30px 25px;
+
+    }
+
 }
